@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My News Page</title>
+    <style>
+        .article {
+            border: 1px solid #444444;
+            background-color: #A9A9A9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+            {foreach $news as $article}
+                <li class="article">
+                    <h3>{$article['title']}</h3>
+                    <p>{$article['text']}</p>
+                    <small>{$article['created_at']}</small>
+                </li>
+            {/foreach}
+        </ul>
+</body>
+</html>
